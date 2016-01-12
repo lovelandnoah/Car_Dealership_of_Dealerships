@@ -1,0 +1,12 @@
+%br
+%h2.center Welcome to my Car Dealership of DealerShips
+%br
+%h3.center.grey
+	%br
+	- @dealership.each do |t|
+		%button.orange.lighten-1.btn.waves-effect.waves-light.container
+			= link_to t.name, dealership_path(t), class: "white-text"
+
+	%br
+	%br
+	%br	

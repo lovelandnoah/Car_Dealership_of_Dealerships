@@ -1,0 +1,11 @@
+%br
+.container
+	%h2 #{@car.make} #{@car.model} 
+	%h3 #{@car.year} 
+	%h3 #{@car.color}
+	%br
+	%br
+	%hr
+	.center
+		%button.btn.green= link_to "Edit This #{@car.make}", edit_car_path(@car), class: "white-text"
+		%button.btn.red= link_to "Delete This #{@car.make}", car_path, method: :delete, class: "white-text"

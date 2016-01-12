@@ -1,0 +1,12 @@
+%h1.center= @dealership.name
+%br
+%hr
+%h4.center These are the Salesmen that work for Our Dealership
+.center
+	- @salesmen.each do |work|
+		%button.btn.green.waves-effect.waves-light
+			= link_to work.f_name, salesman_path(work), class: "white-text"
+			= link_to work.l_name, salesman_path(work), class: "white-text"
+			= link_to work.email, salesman_path(work), class: "yellow-text"
+			
+%h3.center Click on these Salesmen to see the Cars we have to offer!!
